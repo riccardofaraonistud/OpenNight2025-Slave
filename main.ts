@@ -1,4 +1,11 @@
 radio.onReceivedNumber(function (receivedNumber) {
+    basic.showLeds(`
+        . . # . .
+        . # # . .
+        . . # . .
+        . . # . .
+        . # # # .
+        `)
     if (receivedNumber == 1) {
         if (input.buttonIsPressed(Button.A)) {
             choice = 2
