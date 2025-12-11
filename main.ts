@@ -1,4 +1,3 @@
-let choice = 0
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
         if (input.buttonIsPressed(Button.A)) {
@@ -36,3 +35,5 @@ radio.onReceivedNumber(function (receivedNumber) {
         }
     }
 })
+let choice = 0
+radio.setGroup(1)
