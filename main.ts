@@ -7,24 +7,26 @@ radio.onReceivedNumber(function (receivedNumber) {
         . # # # .
         `)
     if (receivedNumber == 1) {
-        if (input.buttonIsPressed(Button.A)) {
-            choice = 2
-            basic.showLeds(`
-                . # . # .
-                . # . # .
-                . . . . .
-                # . . . #
-                . # # # .
-                `)
-        } else if (input.buttonIsPressed(Button.B)) {
-            choice = 3
-            basic.showLeds(`
-                # . . . #
-                . # . # .
-                . . # . .
-                . # . # .
-                # . . . #
-                `)
+        while (receivedNumber == 1) {
+            if (input.buttonIsPressed(Button.A)) {
+                choice = 2
+                basic.showLeds(`
+                    . # . # .
+                    . # . # .
+                    . . . . .
+                    # . . . #
+                    . # # # .
+                    `)
+            } else if (input.buttonIsPressed(Button.B)) {
+                choice = 3
+                basic.showLeds(`
+                    # . . . #
+                    . # . # .
+                    . . # . .
+                    . # . # .
+                    # . . . #
+                    `)
+            }
         }
     } else {
         if (receivedNumber == choice) {
